@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankar Panipuri and Chaat - Authentic Taste Since 1989</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header .tagline {
+            font-size: 1.2rem;
+            font-style: italic;
+            opacity: 0.95;
+        }
+        
+        .legacy {
+            background: #fff8e1;
+            padding: 1rem;
+            text-align: center;
+            font-weight: bold;
+            color: #f57c00;
+            border-bottom: 3px solid #ff6b35;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        .section {
+            margin-bottom: 3rem;
+        }
+        
+        .section h2 {
+            color: #ff6b35;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            border-bottom: 3px solid #f7931e;
+            padding-bottom: 0.5rem;
+        }
+        
+        .about {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        
+        .menu-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2rem 0;
+        }
+        
+        .menu-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        
+        .contact-card h3 {
+            color: #ff6b35;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .contact-card p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .phone-number {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #f7931e;
+            margin: 1rem 0;
+        }
+        
+        .call-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .call-button:hover {
+            background: linear-gradient(135deg, #45a049 0%, #4CAF50 100%);
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+        }
+        
+        .hours {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 2rem 0;
+        }
+        
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+        
+        .footer p {
+            margin: 0.5rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🥘 Shankar Panipuri and Chaat 🥘</h1>
+        <p class="tagline">Authentic Homemade Taste</p>
+    </div>
+    
+    <div class="legacy">
+        ✨ A Family Legacy Since 1989 - Serving Delicious Panipuri for Over 35 Years ✨
+    </div>
+    
+    <div class="container">
+        <div class="section">
+            <h2>About Us</h2>
+            <div class="about">
+                <p>Welcome to <strong>Shankar Panipuri and Chaat</strong>! Started by my father in 1989, we've been serving authentic, homemade panipuri to our beloved customers for over three decades. Now run by <strong>Prem Shankar Kotwani</strong>, we continue the family tradition of quality and taste.</p>
+                <p style="margin-top: 1rem;">Every batch is made with love and care in our home kitchen, using the same recipes that have delighted customers since 1989. Experience the authentic taste that has stood the test of time!</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Our Menu</h2>
+            <div class="menu-container">
+                <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/a51fdb6c-78e2-4dbe-8ba9-60024810e5bd/2025-12-12T08-39-28-886Z-4cbbabd0-chat-image-1765528768867-0.jpg" alt="Shankar Panipuri Menu" class="menu-image">
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Business Hours</h2>
+            <div class="hours">
+                🕐 Open Daily: 7:00 AM - 11:00 PM 🕐
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Contact & Location</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>📞 Call to Order</h3>
+                    <p class="phone-number">9273304193</p>
+                    <a href="tel:9273304193" class="call-button">📱 Call Now</a>
+                </div>
+                
+                <div class="contact-card">
+                    <h3>📧 Email Us</h3>
+                    <p>premkotwani143@gmail.com</p>
+                </div>
+                
+                <div class="contact-card">
+                    <h3>📍 Visit Us (Take Away)</h3>
+                    <p>
+                        <strong>Shankar Panipuri and Chaat</strong><br>
+                        4393 Sita Ram Bhavan<br>
+                        Patharvat Lane, Panchavati<br>
+                        Nashik<br>
+                        (Opposite Khatwari Dharmashala Back Gate)
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section" style="background: #fff3e0; padding: 2rem; border-radius: 10px; text-align: center;">
+            <h2 style="border: none;">🏠 Take Away Service</h2>
+            <p style="font-size: 1.2rem; margin-top: 1rem;">We operate from our home kitchen. Call ahead to place your order and pick up fresh, delicious panipuri!</p>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p><strong>Shankar Panipuri and Chaat</strong></p>
+        <p>A Family Tradition Since 1989</p>
+        <p>Panchavati, Nashik | 📞 9273304193</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">© 2025 Shankar Panipuri and Chaat. All rights reserved.</p>
+    </div>
+</body>
+</html>
