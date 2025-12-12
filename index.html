@@ -88,6 +88,35 @@
             box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         }
         
+        .order-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .whatsapp-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+        
+        .whatsapp-button:hover {
+            background: linear-gradient(135deg, #128C7E 0%, #25D366 100%);
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+        }
+        
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -208,6 +237,28 @@
             font-weight: bold;
         }
         
+        .order-highlight {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            padding: 2.5rem 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+            margin-bottom: 3rem;
+        }
+        
+        .order-highlight h2 {
+            color: white;
+            border: none;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .order-highlight p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+        
         .footer {
             background: #333;
             color: white;
@@ -218,6 +269,32 @@
         
         .footer p {
             margin: 0.5rem 0;
+        }
+        
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+        
+        .floating-whatsapp a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.5);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-size: 2rem;
+        }
+        
+        .floating-whatsapp a:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.7);
         }
         
         @media (max-width: 768px) {
@@ -240,6 +317,21 @@
             .qr-code {
                 max-width: 280px;
             }
+            
+            .whatsapp-button {
+                font-size: 1.1rem;
+                padding: 1rem 1.5rem;
+            }
+            
+            .floating-whatsapp {
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .floating-whatsapp a {
+                width: 55px;
+                height: 55px;
+            }
         }
     </style>
 </head>
@@ -254,6 +346,14 @@
     </div>
     
     <div class="container">
+        <div class="order-highlight">
+            <h2>📱 Order Now on WhatsApp!</h2>
+            <p>Quick & Easy Ordering - Get Fresh Panipuri Delivered to Your Hands</p>
+            <a href="https://wa.me/919273304193?text=Hi%20Shankar%20Panipuri!%20I%20would%20like%20to%20place%20an%20order.%0A%0APlease%20share%20your%20menu%20and%20availability." class="whatsapp-button">
+                💬 Order on WhatsApp
+            </a>
+        </div>
+        
         <div class="section">
             <h2>About Us</h2>
             <div class="about">
@@ -266,6 +366,14 @@
             <h2>Our Menu</h2>
             <div class="menu-container">
                 <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/a51fdb6c-78e2-4dbe-8ba9-60024810e5bd/2025-12-12T08-39-28-886Z-4cbbabd0-chat-image-1765528768867-0.jpg" alt="Shankar Panipuri Menu" class="menu-image">
+            </div>
+            <div class="order-buttons">
+                <a href="https://wa.me/919273304193?text=Hi!%20I%20want%20to%20order%20*50%20Pani%20Puri*%20(Rs.%2090)%0A%0AName:%20%0APickup%20Time:%20" class="whatsapp-button">
+                    💬 Order 50 Pani Puri
+                </a>
+                <a href="https://wa.me/919273304193?text=Hi!%20I%20want%20to%20order%20*100%20Pani%20Puri*%20(Rs.%20180)%0A%0AName:%20%0APickup%20Time:%20" class="whatsapp-button">
+                    💬 Order 100 Pani Puri
+                </a>
             </div>
         </div>
         
@@ -283,6 +391,14 @@
                     <h3>📞 Call to Order</h3>
                     <p class="phone-number">9273304193</p>
                     <a href="tel:9273304193" class="call-button">📱 Call Now</a>
+                </div>
+                
+                <div class="contact-card">
+                    <h3>💬 WhatsApp Order</h3>
+                    <p style="margin: 1rem 0;">Quick & Easy</p>
+                    <a href="https://wa.me/919273304193?text=Hi%20Shankar%20Panipuri!%20I%20would%20like%20to%20place%20an%20order." class="call-button" style="background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);">
+                        💬 WhatsApp Us
+                    </a>
                 </div>
                 
                 <div class="contact-card">
@@ -332,14 +448,21 @@
         
         <div class="section" style="background: #fff3e0; padding: 2rem; border-radius: 10px; text-align: center;">
             <h2 style="border: none;">🏠 Take Away Service</h2>
-            <p style="font-size: 1.2rem; margin-top: 1rem;">We operate from our home kitchen. Call ahead to place your order and pick up fresh, delicious panipuri!</p>
+            <p style="font-size: 1.2rem; margin-top: 1rem;">We operate from our home kitchen. Order via WhatsApp or call ahead to place your order and pick up fresh, delicious panipuri!</p>
         </div>
+    </div>
+    
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-whatsapp">
+        <a href="https://wa.me/919273304193?text=Hi%20Shankar%20Panipuri!%20I%20would%20like%20to%20place%20an%20order." target="_blank" title="Order on WhatsApp">
+            💬
+        </a>
     </div>
     
     <div class="footer">
         <p><strong>Shankar Panipuri and Chaat</strong></p>
         <p>A Family Tradition Since 1989</p>
-        <p>Panchavati, Nashik | 📞 9273304193</p>
+        <p>Panchavati, Nashik | 📞 9273304193 | 💬 WhatsApp Orders Available</p>
         <p style="margin-top: 1rem; font-size: 0.9rem;">© 2025 Shankar Panipuri and Chaat. All rights reserved.</p>
     </div>
 </body>
