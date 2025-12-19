@@ -136,6 +136,33 @@
             margin-top: 2rem;
         }
         
+        .order-now-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .order-now-button:hover {
+            background: linear-gradient(135deg, #F7931E 0%, #FF6B35 100%);
+            transform: scale(1.08);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.6);
+        }
+        
         .whatsapp-button {
             display: inline-flex;
             align-items: center;
@@ -278,25 +305,81 @@
         }
         
         .order-highlight {
-            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
             color: white;
-            padding: 2.5rem 2rem;
+            padding: 3rem 2rem;
             border-radius: 15px;
             text-align: center;
-            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
             margin-bottom: 3rem;
         }
         
         .order-highlight h2 {
             color: white;
             border: none;
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
         }
         
         .order-highlight p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .order-options {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .order-steps {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .order-steps h3 {
+            color: #ff6b35;
+            font-size: 1.8rem;
             margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .step {
+            text-align: center;
+            padding: 1.5rem;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
+        
+        .step-number {
+            background: #ff6b35;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .step p {
+            font-size: 1rem;
+            color: #666;
         }
         
         .footer {
@@ -362,7 +445,7 @@
                 max-width: 280px;
             }
             
-            .whatsapp-button {
+            .whatsapp-button, .order-now-button {
                 font-size: 1rem;
                 padding: 0.9rem 1.3rem;
             }
@@ -375,6 +458,14 @@
             .floating-whatsapp a {
                 width: 55px;
                 height: 55px;
+            }
+            
+            .order-options {
+                flex-direction: column;
+            }
+            
+            .steps-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -391,11 +482,38 @@
     
     <div class="container">
         <div class="order-highlight">
-            <h2>📱 Order Now on WhatsApp!</h2>
-            <p>Quick & Easy Ordering - Get Fresh Panipuri Delivered to Your Hands</p>
-            <a href="https://wa.me/919273304193?text=Hi%20Shankar%20Panipuri!%20I%20would%20like%20to%20place%20an%20order.%0A%0APlease%20share%20your%20menu%20and%20availability." class="whatsapp-button" style="font-size: 1.3rem; padding: 1.2rem 2.5rem;">
-                💬 Order on WhatsApp
-            </a>
+            <h2>🛒 Order Online & Pay First!</h2>
+            <p>Fill the form, pay online, and pick up your fresh panipuri - Just like Swiggy!</p>
+            <div class="order-options">
+                <a href="#" class="order-now-button" onclick="alert('Google Form link will be added here after you create it! For now, use WhatsApp to order.'); return false;">
+                    🛒 Order Now (Pay Online)
+                </a>
+                <a href="https://wa.me/919273304193?text=Hi%20Shankar%20Panipuri!%20I%20would%20like%20to%20place%20an%20order." class="whatsapp-button">
+                    💬 Order on WhatsApp
+                </a>
+            </div>
+        </div>
+        
+        <div class="order-steps">
+            <h3>📋 How Online Ordering Works</h3>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <p><strong>Fill Order Form</strong><br>Select items & quantity</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <p><strong>Pay Online</strong><br>UPI/PhonePe/GPay</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <p><strong>Get Confirmation</strong><br>Order confirmed via email</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <p><strong>Pick Up</strong><br>Collect fresh panipuri!</p>
+                </div>
+            </div>
         </div>
         
         <div class="section">
@@ -417,36 +535,24 @@
                     <h3>🥘 50 Pani Puri (Complete)</h3>
                     <p class="price">₹90</p>
                     <p class="details">50 Puris + 0.5L Sweet Water + 0.5L Spicy Water</p>
-                    <a href="https://wa.me/919273304193?text=Hi!%20I%20want%20to%20order%20*50%20Pani%20Puri%20Complete*%20(Rs.%2090)%0A%0AName:%20%0APickup%20Time:%20" class="whatsapp-button" style="margin-top: 1rem;">
-                        💬 Order Now
-                    </a>
                 </div>
                 
                 <div class="menu-item">
                     <h3>🥘 100 Pani Puri (Complete)</h3>
                     <p class="price">₹180</p>
                     <p class="details">100 Puris + 0.5L Sweet Water + 1L Spicy Water</p>
-                    <a href="https://wa.me/919273304193?text=Hi!%20I%20want%20to%20order%20*100%20Pani%20Puri%20Complete*%20(Rs.%20180)%0A%0AName:%20%0APickup%20Time:%20" class="whatsapp-button" style="margin-top: 1rem;">
-                        💬 Order Now
-                    </a>
                 </div>
                 
                 <div class="menu-item">
                     <h3>🫓 50 Puri Only</h3>
                     <p class="price">₹50</p>
                     <p class="details">50 Fresh Crispy Puris (No Water)</p>
-                    <a href="https://wa.me/919273304193?text=Hi!%20I%20want%20to%20order%20*50%20Puri%20Only*%20(Rs.%2050)%0A%0AName:%20%0APickup%20Time:%20" class="whatsapp-button" style="margin-top: 1rem;">
-                        💬 Order Now
-                    </a>
                 </div>
                 
                 <div class="menu-item">
                     <h3>🫓 100 Puri Only</h3>
                     <p class="price">₹100</p>
                     <p class="details">100 Fresh Crispy Puris (No Water)</p>
-                    <a href="https://wa.me/919273304193?text=Hi!%20I%20want%20to%20order%20*100%20Puri%20Only*%20(Rs.%20100)%0A%0AName:%20%0APickup%20Time:%20" class="whatsapp-button" style="margin-top: 1rem;">
-                        💬 Order Now
-                    </a>
                 </div>
             </div>
         </div>
@@ -522,7 +628,7 @@
         
         <div class="section" style="background: #fff3e0; padding: 2rem; border-radius: 10px; text-align: center;">
             <h2 style="border: none;">🏠 Take Away Service</h2>
-            <p style="font-size: 1.2rem; margin-top: 1rem;">We operate from our home kitchen. Order via WhatsApp or call ahead to place your order and pick up fresh, delicious panipuri!</p>
+            <p style="font-size: 1.2rem; margin-top: 1rem;">Order online, pay first, and pick up fresh delicious panipuri from our home kitchen!</p>
         </div>
     </div>
     
